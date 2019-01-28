@@ -1,5 +1,5 @@
 {
-  "name": "register-service-worker",
+  "name": "@danieldx/register-service-worker",
   "sideEffects": false,
   "version": "1.5.2",
   "description": "Script for registering service worker, with hooks",
