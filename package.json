@@ -1,7 +1,7 @@
 {
   "name": "@danieldx/register-service-worker",
   "sideEffects": false,
-  "version": "1.5.2",
+  "version": "1.5.4",
   "description": "Script for registering service worker, with hooks",
   "main": "index.js",
   "scripts": {
@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yyx990803/register-service-worker.git"
+    "url": "git+https://github.com/daniel-dx/register-service-worker.git"
   },
   "keywords": [
     "service-worker"
   ],
-  "author": "Evan You",
+  "author": "Evan You, DX",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yyx990803/register-service-worker/issues"
+    "url": "https://github.com/daniel-dx/register-service-worker/issues"
   },
-  "homepage": "https://github.com/yyx990803/register-service-worker#readme",
+  "homepage": "https://github.com/daniel-dx/register-service-worker#readme",
   "devDependencies": {
     "buble": "^0.18.0",
     "conventional-changelog-cli": "^2.0.1"
