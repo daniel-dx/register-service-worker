@@ -15,7 +15,7 @@ const isLocalhost = () => Boolean(
     )
 )
 
-export function register (swUrl, options = {}, hooks) {
+export function register (swUrl, options = { scope: './',  immediate: false }, hooks) {
   const emit = (hook, ...args) => {
     if (hooks && hooks[hook]) {
       hooks[hook](...args)
@@ -23,7 +23,8 @@ export function register (swUrl, options = {}, hooks) {
   }
 
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
+
+    function _register() {
       if (isLocalhost()) {
         // This is running on localhost. Lets check if a service worker still exists or not.
         checkValidServiceWorker(swUrl, options, emit)
@@ -34,7 +35,15 @@ export function register (swUrl, options = {}, hooks) {
         // Is not local host. Just register service worker
         registerValidSW(swUrl, options, emit)
       }
-    })
+    }
+
+    if (options.immediate) {
+      _register();
+    } else {
+      window.addEventListener('load', function () {
+        _register();
+      })
+    }
   }
 }
 

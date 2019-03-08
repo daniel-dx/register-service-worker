@@ -1,7 +1,7 @@
 {
   "name": "@danieldx/register-service-worker",
   "sideEffects": false,
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "Script for registering service worker, with hooks",
   "main": "index.js",
   "scripts": {

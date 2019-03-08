@@ -6,10 +6,14 @@ A script to simplify service worker registration with hooks for common events.
 
 **Note:** this script uses ES modules export and is expected to be used with a client side bundler that can handle ES modules syntax.
 
+
 ``` js
 import { register } from 'register-service-worker'
 
-register('/service-worker.js', {scope: '/'}, {
+/**
+ * immediate: If you registered after the onload event, you can set immediate to true. false means auto registered in onload event handler
+ */ 
+register('/service-worker.js', { scope: '/', immediate: false }, {
   ready (registration) {
     console.log('Service worker is active.')
   },
